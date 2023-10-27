@@ -1,7 +1,12 @@
+// Metadata
 import type { Metadata } from "next";
 
+// Styles
 // These styles apply to every route in the application
 import "./globals.css";
+
+// Components
+import Header from "@/app/components/server/header";
 
 export const metadata: Metadata = {
   title: "IMDb Clone",
@@ -15,7 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {/* Navbar */}
+        {/* SearchBox */}
+        {children}
+      </body>
     </html>
   );
 }
