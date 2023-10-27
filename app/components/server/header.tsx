@@ -2,7 +2,8 @@
 import Link from "next/link";
 
 // Components
-import MenuItem from "../client/menuItem";
+import MenuItem from "./menuItem";
+import DarkModeSwitch from "./darkModeSwitch";
 
 // Icons
 import { AiFillHome } from "react-icons/ai";
@@ -15,13 +16,14 @@ export default function Header() {
         <MenuItem title="HOME" address="/" Icon={AiFillHome} />
         <MenuItem title="ABOUT" address="/about" Icon={BsFillInfoCircleFill} />
       </div>
-      <div className="flex">
+      <div className="flex items-center space-x-5">
+        <DarkModeSwitch />
         <Link href="/">
           <h2 className="text-2xl">
             <span className="font-bold bg-amber-500 py-1 px-2 rounded-lg mr-1">
               IMDb
             </span>
-            <span className="text-xl hidden sm:inline">Clone</span>
+            <span className="text-xl hidden sm:inline sm:mr-2">Clone</span>
           </h2>
         </Link>
       </div>
